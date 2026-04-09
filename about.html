@@ -1,33 +1,77 @@
 <!DOCTYPE html>
-<html>
-  <head>
-    <title>About</title>
-    <link rel="stylesheet" href="style.css">
-  </head>
-</html>
-
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>About — DS4200 Music Project</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
 <body>
-  <nav>
-    <a href="index.html">Home</a>
-    <a href="about.html">About</a>
-    <a href="analysis.html">Analysis</a>
-  </nav>
+  <div class="app-shell">
 
-  <h1>Sources & References</h1>
-  <p><strong>Reference 1:</strong> Spotify at 15 - How Streaming Reinvented the Music Industry</p>
-  <p>Source: <a href="https://variety.com/2021/music/news/spotify-turns-15-how-the-streaming-giant-has-changed-and-reinvented-the-music-industry-1234948299/">Variety, 2021</a></p>
-  <p>  This article examines how Spotify and other streaming giants (Apple Music, YouTube Music) have fundamentally
-  reshaped music industry consumption. Spotify grew from holding roughly 7% of the U.S. music market in 2010 to 
-  83% by the end of 2020. The introduction of free-tier streaming nearly eradicated music piracy and dramatically
-  lowered the cost of genre exploration - listeners no longer needed to buy an album in an unfamiliar genre to try it.
-  This context is directly relevant to our project, as these structural shifts are inseparable from how popularity
-  metrics function today.</p>
-  <p><strong>Reference 2:</strong> Beyond Profits - The Music Industry's Cultural and Financial Impact in 2025</p>
-  <p>Source: <a href="https://newsroom.spotify.com/2025-03-12/beyond-profits-how-the-music-industrys-cultural-and-financial-impact-define-its-success-in-2025/">Spotify Newsroom, March 2025</a></p>
-  <p>  This Spotify newsroom piece discusses streaming's cultural and financial footprint as of 2025, including over
-  $10 billion paid out to artists in royalties in 2024. It also highlights that more than half of artists earning over
-  $1,000 in streaming royalties made the majority of those earnings from listeners outside their home country - underscoring
-  how global accessibility has redefined what "success" means for an artist. This supports our framing of popularity
-  as a multi-dimensional, globally influenced metric.</p>
+    <!-- SIDEBAR -->
+    <aside class="sidebar">
+      <a class="sidebar-logo" href="index.html">
+        <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+          <path d="M12 0C5.4 0 0 5.4 0 12s5.4 12 12 12 12-5.4 12-12S18.66 0 12 0zm5.521 17.34c-.24.359-.66.48-1.021.24-2.82-1.74-6.36-2.101-10.561-1.141-.418.122-.779-.179-.899-.539-.12-.421.18-.78.54-.9 4.56-1.021 8.52-.6 11.64 1.32.42.18.479.659.301 1.02zm1.44-3.3c-.301.42-.841.6-1.262.3-3.239-1.98-8.159-2.58-11.939-1.38-.479.12-1.02-.12-1.14-.6-.12-.48.12-1.021.6-1.141C9.6 9.9 15 10.561 18.72 12.84c.361.181.54.78.241 1.2zm.12-3.36C15.24 8.4 8.82 8.16 5.16 9.301c-.6.179-1.2-.181-1.38-.721-.18-.601.18-1.2.72-1.381 4.26-1.26 11.28-1.02 15.721 1.621.539.3.719 1.02.419 1.56-.299.421-1.02.599-1.559.3z"/>
+        </svg>
+        <span>DS4200<br/>Music Project</span>
+      </a>
+
+      <span class="sidebar-section-label">Navigation</span>
+
+      <a href="index.html" class="nav-link">
+        <svg viewBox="0 0 24 24"><path d="M12 3L2 12h3v9h6v-5h2v5h6v-9h3L12 3z"/></svg>
+        Home
+      </a>
+      <a href="about.html" class="nav-link active">
+        <svg viewBox="0 0 24 24"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm1 15h-2v-6h2v6zm0-8h-2V7h2v2z"/></svg>
+        About
+      </a>
+      <a href="analysis.html" class="nav-link">
+        <svg viewBox="0 0 24 24"><path d="M19 3H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2zM9 17H7v-7h2v7zm4 0h-2V7h2v10zm4 0h-2v-4h2v4z"/></svg>
+        Analysis
+      </a>
+    </aside>
+
+    <!-- MAIN CONTENT -->
+    <main class="main-content">
+
+      <div class="page-header">
+        <div class="eyebrow">References & Sources</div>
+        <h1>About This Project</h1>
+      </div>
+
+      <!-- Reference 1 -->
+      <div class="ref-card">
+        <div class="ref-number">Reference 01</div>
+        <h3>Spotify at 15 — How Streaming Reinvented the Music Industry</h3>
+        <p>This article examines how Spotify and other streaming giants (Apple Music, YouTube Music) have fundamentally
+        reshaped music industry consumption. Spotify grew from holding roughly 7% of the U.S. music market in 2010 to
+        83% by the end of 2020. The introduction of free-tier streaming nearly eradicated music piracy and dramatically
+        lowered the cost of genre exploration — listeners no longer needed to buy an album in an unfamiliar genre to try it.
+        This context is directly relevant to our project, as these structural shifts are inseparable from how popularity
+        metrics function today.</p>
+        <a href="https://variety.com/2021/music/news/spotify-turns-15-how-the-streaming-giant-has-changed-and-reinvented-the-music-industry-1234948299/" target="_blank">
+          Read on Variety, 2021 ↗
+        </a>
+      </div>
+
+      <!-- Reference 2 -->
+      <div class="ref-card">
+        <div class="ref-number">Reference 02</div>
+        <h3>Beyond Profits — The Music Industry's Cultural and Financial Impact in 2025</h3>
+        <p>This Spotify newsroom piece discusses streaming's cultural and financial footprint as of 2025, including over
+        $10 billion paid out to artists in royalties in 2024. It also highlights that more than half of artists earning over
+        $1,000 in streaming royalties made the majority of those earnings from listeners outside their home country —
+        underscoring how global accessibility has redefined what "success" means for an artist. This supports our framing
+        of popularity as a multi-dimensional, globally influenced metric.</p>
+        <a href="https://newsroom.spotify.com/2025-03-12/beyond-profits-how-the-music-industrys-cultural-and-financial-impact-define-its-success-in-2025/" target="_blank">
+          Read on Spotify Newsroom, March 2025 ↗
+        </a>
+      </div>
+
+    </main>
+  </div>
 </body>
 </html>
