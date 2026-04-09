@@ -1,31 +1,91 @@
 <!DOCTYPE html>
-<html>
-  <head>
-    <title>Composing a hit: What Really Makes a Song Successful?</title>
-    <link rel="stylesheet" href="style.css">
-  </head>
-</html>
-
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Composing a Hit: What Really Makes a Song Successful?</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
 <body>
-  <nav>
-    <a href="index.html">Home</a>
-    <a href="about.html">About</a>
-    <a href="analysis.html">Analysis</a>
-  </nav>
+  <div class="app-shell">
 
-  <h1>Composing a Hit: What Really Makes a Song Successful?</h1>
-    <p>Historically, music success was measured through simple metrics such as chart rankings, sales, and radio plays.
-  Today, streaming has transformed the industry - songs are more accessible to a broader global audience, and success
-  has become dramatically more complex. In this project, we aim to answer: "What really makes a song successful?"</p>
-  <p></p>
-    <p>We will explore Spotify track-level data from 2009 to 2025, analyzing features such as track popularity, duration,
-  explicit content, artist popularity, follower count, and genres. To make comparisons meaningful, we will define "popularity"
-  carefully - using Spotify's native 0-100 track-level score, and where appropriate, converting it into categorical tiers
-  (e.g., four quantile-based groupings or a binary popular/not-popular classification) to enable cleaner comparisons across
-  visualizations.</p>
-  <p></p>
-    <p>This topic matters for artists seeking to understand the patterns behind successful releases, for analysts studying how
-  streaming platforms shape music trends, and for our group to examine whether our personal listening habits reflect popularity
-  patterns.</p>
+    <!-- SIDEBAR -->
+    <aside class="sidebar">
+      <a class="sidebar-logo" href="index.html">
+        <!-- Spotify-style logo -->
+        <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+          <path d="M12 0C5.4 0 0 5.4 0 12s5.4 12 12 12 12-5.4 12-12S18.66 0 12 0zm5.521 17.34c-.24.359-.66.48-1.021.24-2.82-1.74-6.36-2.101-10.561-1.141-.418.122-.779-.179-.899-.539-.12-.421.18-.78.54-.9 4.56-1.021 8.52-.6 11.64 1.32.42.18.479.659.301 1.02zm1.44-3.3c-.301.42-.841.6-1.262.3-3.239-1.98-8.159-2.58-11.939-1.38-.479.12-1.02-.12-1.14-.6-.12-.48.12-1.021.6-1.141C9.6 9.9 15 10.561 18.72 12.84c.361.181.54.78.241 1.2zm.12-3.36C15.24 8.4 8.82 8.16 5.16 9.301c-.6.179-1.2-.181-1.38-.721-.18-.601.18-1.2.72-1.381 4.26-1.26 11.28-1.02 15.721 1.621.539.3.719 1.02.419 1.56-.299.421-1.02.599-1.559.3z"/>
+        </svg>
+        <span>DS4200<br/>Music Project</span>
+      </a>
+
+      <span class="sidebar-section-label">Navigation</span>
+
+      <a href="index.html" class="nav-link active">
+        <svg viewBox="0 0 24 24"><path d="M12 3L2 12h3v9h6v-5h2v5h6v-9h3L12 3z"/></svg>
+        Home
+      </a>
+      <a href="about.html" class="nav-link">
+        <svg viewBox="0 0 24 24"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm1 15h-2v-6h2v6zm0-8h-2V7h2v2z"/></svg>
+        About
+      </a>
+      <a href="analysis.html" class="nav-link">
+        <svg viewBox="0 0 24 24"><path d="M19 3H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2zM9 17H7v-7h2v7zm4 0h-2V7h2v10zm4 0h-2v-4h2v4z"/></svg>
+        Analysis
+      </a>
+    </aside>
+
+    <!-- MAIN CONTENT -->
+    <main class="main-content">
+
+      <div class="page-header">
+        <div class="eyebrow">DS4200 — Information Visualization</div>
+        <h1>Composing a Hit:<br/>What Really Makes a Song Successful?</h1>
+      </div>
+
+      <div class="prose-section">
+        <p>Historically, music success was measured through simple metrics such as chart rankings, sales, and radio plays.
+        Today, streaming has transformed the industry — songs are more accessible to a broader global audience, and success
+        has become dramatically more complex. In this project, we aim to answer: <strong>"What really makes a song successful?"</strong></p>
+
+        <p>We will explore Spotify track-level data from 2009 to 2025, analyzing features such as track popularity, duration,
+        explicit content, artist popularity, follower count, and genres. To make comparisons meaningful, we define "popularity"
+        carefully — using Spotify's native 0–100 track-level score, and where appropriate, converting it into categorical tiers
+        (e.g., four quantile-based groupings or a binary popular/not-popular classification) to enable cleaner comparisons
+        across visualizations.</p>
+
+        <p>This topic matters for artists seeking to understand the patterns behind successful releases, for analysts studying
+        how streaming platforms shape music trends, and for our group to examine whether our personal listening habits
+        reflect popularity patterns.</p>
+      </div>
+
+      <hr class="sp-divider" />
+
+      <div class="card-grid">
+        <div class="card">
+          <div class="card-icon">
+            <svg viewBox="0 0 24 24"><path d="M12 3v10.55c-.59-.34-1.27-.55-2-.55-2.21 0-4 1.79-4 4s1.79 4 4 4 4-1.79 4-4V7h4V3h-6z"/></svg>
+          </div>
+          <h3>Spotify Track Data</h3>
+          <p>2009–2025 dataset covering popularity scores, duration, explicit flags, artist metrics, and genre tags.</p>
+        </div>
+        <div class="card">
+          <div class="card-icon">
+            <svg viewBox="0 0 24 24"><path d="M19 3H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2zM9 17H7v-7h2v7zm4 0h-2V7h2v10zm4 0h-2v-4h2v4z"/></svg>
+          </div>
+          <h3>5 Visualizations</h3>
+          <p>Interactive charts exploring how audio features, artist size, and release timing relate to popularity.</p>
+        </div>
+        <div class="card">
+          <div class="card-icon">
+            <svg viewBox="0 0 24 24"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 14.5v-9l6 4.5-6 4.5z"/></svg>
+          </div>
+          <h3>What Drives Success?</h3>
+          <p>We explore whether popularity can be predicted from measurable audio characteristics and artist reach.</p>
+        </div>
+      </div>
+
+    </main>
+  </div>
 </body>
 </html>
