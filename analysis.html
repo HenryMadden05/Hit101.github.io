@@ -1,35 +1,75 @@
 <!DOCTYPE html>
-<html>
-  <head>
-    <title>Analysis</title>
-    <link rel="stylesheet" href="style.css">
-  </head>
-</html>
-
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Analysis — DS4200 Music Project</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
 <body>
-  <nav>
-    <a href="index.html">Home</a>
-    <a href="about.html">About</a>
-    <a href="analysis.html">Analysis</a>
-  </nav>
+  <div class="app-shell">
 
-  <h1>Analysis & Visualizations</h1>
-  <p>All data visualizations have clear titles, labels, legends (if need). At least 3 of the figures need to
-    have customized settings (color, shape, layout etc.) We also need a paragraph to explain the
-    takeaway of the visualization on the webpage, and a paragraph to explain the design idea
-    for the visualization on a separated word document. (40 pts)
-  <p>Among the 5 data visualizations, at least 3 different kinds of the interaction should be implemented.
-    Interactive functions are well-explained and easy to be used. The interaction functions are meaningful
-    and can help people learn more about the data compare to a static plot. The interaction works. (20pts)</p>
-  <p>A summary for your findings, including what you have learned from the data visualization and what
-    can be done in the future. (10 pts)</p>
-  <h2>Track Popularity vs. Release Date</h2>
-  <iframe src="bubble_chart.html" width="750" height="400" frameborder="0"></iframe>
+    <!-- SIDEBAR -->
+    <aside class="sidebar">
+      <a class="sidebar-logo" href="index.html">
+        <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+          <path d="M12 0C5.4 0 0 5.4 0 12s5.4 12 12 12 12-5.4 12-12S18.66 0 12 0zm5.521 17.34c-.24.359-.66.48-1.021.24-2.82-1.74-6.36-2.101-10.561-1.141-.418.122-.779-.179-.899-.539-.12-.421.18-.78.54-.9 4.56-1.021 8.52-.6 11.64 1.32.42.18.479.659.301 1.02zm1.44-3.3c-.301.42-.841.6-1.262.3-3.239-1.98-8.159-2.58-11.939-1.38-.479.12-1.02-.12-1.14-.6-.12-.48.12-1.021.6-1.141C9.6 9.9 15 10.561 18.72 12.84c.361.181.54.78.241 1.2zm.12-3.36C15.24 8.4 8.82 8.16 5.16 9.301c-.6.179-1.2-.181-1.38-.721-.18-.601.18-1.2.72-1.381 4.26-1.26 11.28-1.02 15.721 1.621.539.3.719 1.02.419 1.56-.299.421-1.02.599-1.559.3z"/>
+        </svg>
+        <span>DS4200<br/>Music Project</span>
+      </a>
 
-  <h2>Popularity Distribution by Year</h2>
-  <iframe src="boxplot.html" width="750" height="400" frameborder="0"></iframe>
+      <span class="sidebar-section-label">Navigation</span>
 
-  <h3>Average Track Popularity by Artist Size</h3>
-  <iframe src="popularity_by_artist_size.html" width="750" height="400" frameborder="0"></iframe>
+      <a href="index.html" class="nav-link">
+        <svg viewBox="0 0 24 24"><path d="M12 3L2 12h3v9h6v-5h2v5h6v-9h3L12 3z"/></svg>
+        Home
+      </a>
+      <a href="about.html" class="nav-link">
+        <svg viewBox="0 0 24 24"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm1 15h-2v-6h2v6zm0-8h-2V7h2v2z"/></svg>
+        About
+      </a>
+      <a href="analysis.html" class="nav-link active">
+        <svg viewBox="0 0 24 24"><path d="M19 3H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2zM9 17H7v-7h2v7zm4 0h-2V7h2v10zm4 0h-2v-4h2v4z"/></svg>
+        Analysis
+      </a>
+    </aside>
+
+    <!-- MAIN CONTENT -->
+    <main class="main-content">
+
+      <div class="page-header">
+        <div class="eyebrow">Interactive Visualizations</div>
+        <h1>Analysis</h1>
+      </div>
+
+      <!-- Viz 1 -->
+      <div class="viz-card">
+        <h2>Track Popularity vs. Release Date</h2>
+        <p class="viz-desc">Explore how track popularity scores have evolved over time, with bubble size encoding additional audio features. Use the interactive controls to filter by genre or popularity tier.</p>
+        <iframe src="bubble_chart.html" title="Bubble Chart: Track Popularity vs Release Date"></iframe>
+      </div>
+
+      <!-- Viz 2 -->
+      <div class="viz-card">
+        <h2>Popularity Distribution by Year</h2>
+        <p class="viz-desc">Box plots reveal the spread and median of popularity scores across release years, highlighting whether certain eras produced consistently more popular tracks.</p>
+        <iframe src="boxplot.html" title="Box Plot: Popularity Distribution by Year"></iframe>
+      </div>
+
+      <!-- Viz 3 -->
+      <div class="viz-card">
+        <h3>Average Track Popularity by Artist Size</h3>
+        <p class="viz-desc">Comparing average track popularity across artist follower-count tiers to examine whether larger artists systematically outperform smaller ones on Spotify's popularity metric.</p>
+        <iframe src="popularity_by_artist_size.html" title="Bar Chart: Popularity by Artist Size"></iframe>
+      </div>
+
+      <!-- Summary -->
+      <div class="summary-box">
+        <h2>Summary & Findings</h2>
+        <p>Add your summary here — discuss what patterns emerged across your visualizations, which audio features showed the strongest relationship with popularity, and what future analyses could extend this work (e.g., NLP on track titles, mood classification, or time-series modeling of streaming velocity).</p>
+      </div>
+
+    </main>
+  </div>
 </body>
 </html>
