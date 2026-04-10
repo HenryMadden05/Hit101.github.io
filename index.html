@@ -52,8 +52,37 @@
         <p>This topic matters for artists seeking to understand the patterns behind successful releases, for analysts studying how
         streaming platforms shape music trends, and for our group to examine whether our personal listening habits reflect popularity
         patterns.</p>
+
+        <div class="top-song-feature">
+          <p class="top-song-label">Most popular song in our dataset</p>
+          
+          <button class="top-song-button" onclick="toggleTopSongPlayer()">Play “Golden” by HUNTR/X</button>
+
+          <div id="top-song-player" style="display: none; margin-top: 16px;">
+            <iframe
+              style="border-radius:12px"
+              src="https://open.spotify.com/embed/track/1CPZ5BxNNd0n0nF4Orb9JS?utm_source=generator"
+              width="100%"
+              height="152"
+              frameborder="0"
+              allowfullscreen=""
+              allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"
+              loading="lazy">
+            </iframe>
+          </div>
+        </div>
       </div>
     </main>
   </div>
+<script>
+  function toggleTopSongPlayer() {
+    const player = document.getElementById("top-song-player");
+    if (player.style.display === "none") {
+      player.style.display = "block";
+    } else {
+      player.style.display = "none";
+    }
+  }
+</script>  
 </body>
 </html>
