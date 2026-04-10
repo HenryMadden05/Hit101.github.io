@@ -175,11 +175,12 @@ body {
 
 .viz-card iframe {
   display: block;
-  width: 750px;
-  height: 400px;
+  width: 100%;
+  max-width: 1000px;
+  height: 520px;
   border: none;
   border-radius: 6px;
-  background: #1a1a1a;
+  background: #ffffff;
 }
 
 /* REFERENCE CARDS */
