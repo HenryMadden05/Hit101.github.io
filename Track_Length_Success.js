@@ -7,7 +7,7 @@ spotify.then(function(data) {
         d.average_popularity = +d.average_popularity;
     });
 
-    const width = 700, height = 320;
+    const width = 700, height = 450;
     const margin = {top: 40, bottom: 55, left: 80, right: 40};
 
     const svg = d3.select("#d3-track-length-chart")
@@ -64,11 +64,14 @@ spotify.then(function(data) {
     const tooltip = d3.select("body")
         .append("div")
         .style("position", "absolute")
-        .style("background", "white")
+        .style("background", "#1f1f1f")
+        .style("color", "#ffffff")       
         .style("font-size", "12px")
-        .style("padding", "6px")
-        .style("border", "1px solid #999")
-        .style("visibility", "hidden");
+        .style("padding", "8px")
+        .style("border-radius", "6px")
+        .style("border", "1px solid #444")
+        .style("visibility", "hidden")
+        .style("pointer-events", "none");
 
     svg.selectAll("rect")
         .data(data)
