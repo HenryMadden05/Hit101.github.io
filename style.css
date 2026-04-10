@@ -151,6 +151,14 @@ body {
   margin-bottom: 14px;
 }
 
+.prose-section h2 {
+  font-size: 18px;
+  font-weight: 800;
+  color: var(--sp-white);
+  margin: 28px 0 10px;
+  letter-spacing: -0.3px;
+}
+
 /* VIZ CARDS */
 .viz-card {
   background: var(--sp-card);
@@ -175,11 +183,12 @@ body {
 
 .viz-card iframe {
   display: block;
-  width: 750px;
-  height: 400px;
+  width: 900px;
+  max-width: 100%;
+  margin: 0 auto;
   border: none;
   border-radius: 6px;
-  background: #1a1a1a;
+  background: #ffffff;
 }
 
 /* REFERENCE CARDS */
@@ -228,6 +237,40 @@ body {
   color: #fff;
 }
 
+.top-song-feature {
+  margin-top: 28px;
+  max-width: 520px;
+  padding: 18px;
+  background: var(--sp-card);
+  border-radius: 10px;
+}
+
+.top-song-label {
+  font-size: 11px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 1.2px;
+  color: var(--sp-green);
+  margin-bottom: 10px;
+}
+
+.top-song-button {
+  background: var(--sp-green);
+  color: #000;
+  border: none;
+  border-radius: 999px;
+  padding: 10px 18px;
+  font-size: 14px;
+  font-weight: 700;
+  cursor: pointer;
+  transition: transform 0.15s ease, opacity 0.15s ease;
+}
+
+.top-song-button:hover {
+  opacity: 0.9;
+  transform: translateY(-1px);
+}
+
 /* RESPONSIVE */
 @media (max-width: 700px) {
   .sidebar { display: none; }
@@ -235,14 +278,6 @@ body {
 }
 
 /* CONCLUSION PAGE */
-.prose-section h2 {
-  font-size: 18px;
-  font-weight: 800;
-  color: var(--sp-white);
-  margin: 28px 0 10px;
-  letter-spacing: -0.3px;
-}
-
 .insight-card {
   display: flex;
   gap: 18px;
