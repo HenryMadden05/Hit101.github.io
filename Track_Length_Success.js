@@ -7,8 +7,8 @@ spotify.then(function(data) {
         d.average_popularity = +d.average_popularity;
     });
 
-    const width = 800, height = 400;
-    const margin = {top: 30, bottom: 50, left: 80, right: 50};
+    const width = 700, height = 320;
+    const margin = {top: 40, bottom: 55, left: 80, right: 40};
 
     const svg = d3.select("#d3-track-length-chart")
         .append("svg")
@@ -22,6 +22,7 @@ spotify.then(function(data) {
         .attr("text-anchor", "middle")
         .style("font-size", "18px")
         .style("font-weight", "bold")
+        .style("fill", "#111")
         .text("Average Song Popularity by Track Length Group");
 
     const x = d3.scaleBand()
@@ -37,16 +38,28 @@ spotify.then(function(data) {
         .domain(data.map(d => d.duration_bin))
         .range(["#e0ccff", "#d6b8ff", "#b266ff", "#8a33cc", "#5a0099"]);
 
-    svg.append("g")
+    const xAxis = svg.append("g")
         .attr("transform", `translate(0,${height - margin.bottom})`)
-        .call(d3.axisBottom(x))
-        .selectAll("text")
-        .style("text-anchor", "middle");
+        .call(d3.axisBottom(x));
 
-    svg.append("g")
-        .attr("transform", `translate(${margin.left},0)`)
-        .call(d3.axisLeft(y))
+    xAxis.selectAll("text")
+        .style("text-anchor", "middle")
+        .style("fill", "#222")
         .style("font-size", "12px");
+
+    xAxis.selectAll("path, line")
+        .style("stroke", "#222");
+
+    const yAxis = svg.append("g")
+        .attr("transform", `translate(${margin.left},0)`)
+        .call(d3.axisLeft(y));
+
+    yAxis.selectAll("text")
+        .style("fill", "#222")
+        .style("font-size", "12px");
+
+    yAxis.selectAll("path, line")
+        .style("stroke", "#222");
 
     const tooltip = d3.select("body")
         .append("div")
@@ -90,15 +103,17 @@ spotify.then(function(data) {
 
     svg.append("text")
         .attr("x", width / 2)
-        .attr("y", height - margin.top + 15)
+        .attr("y", height - 10)
         .style("text-anchor", "middle")
+        .style("fill", "#111")
         .text("Track Length Group");
 
     svg.append("text")
         .attr("transform", "rotate(-90)")
         .attr("x", 0 - (height / 2))
-        .attr("y", margin.left / 3)
+        .attr("y", 30)
         .style("text-anchor", "middle")
+        .style("fill", "#111")
         .text("Average Popularity Score");
 
 });
