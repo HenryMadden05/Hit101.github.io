@@ -67,7 +67,23 @@
         <p class="viz-desc">This chart shows a clear positive relationship between an artist's follower count and their average track popularity score. Artists with fewer than 5 million followers average a popularity score of just 44.1, while those with 75 million or more followers average 62.8 — a gap of nearly 19 points. Notably, the jump from the smallest tier to the 5M–25M tier is the steepest (44.1 to 58.1), suggesting that breaking into a mid-sized audience has a larger impact on track popularity than subsequent growth. The gains between the top two tiers (60.5 to 62.8) are comparatively modest, implying diminishing returns at the very top of the follower spectrum. Overall, this supports the idea that platform visibility and established fanbase size are meaningful drivers of Spotify's popularity metric.</p>
         <iframe src="popularity_by_artist_size.html" title="Bar Chart: Popularity by Artist Size"></iframe>
       </div>
+
+      <div class="viz-card">
+        <h2>Average Track Popularity by Common Title Words</h2>
+        <p class="viz-desc">The below scatter plot depicts the ten most commonly used words in song titles across our dataset. These 10 words are plotted by their counts of appearances across different songs, with each point representing their aggregate average track popularity. There is one clear outlier in the data: the word love. Love appears in 305 different song titles, while the other nine words span the 50 to 100 range. When examining the majority of data points, it becomes evident that there isn’t a strong correlation between the frequency of common words in song titles and their average popularity. This suggests that when artists create new songs, they shouldn’t necessarily include title words commonly used in other songs. Ultimately, this visualization shows that word frequency isn’t a strong predictor of song performance. The plot effectively uses a minimal number of scatter plot points to convey a clear takeaway. This is crucial because a viewer isn’t hit with a plot filled with thousands of data points.</p>
+        <iframe src="title_words_popularity.html" title="Dot Plot: Common Title Words and Song Popularity"></iframe>
+      </div>
+
+      <div class="viz-card">
+        <h2>Average Track Popularity by Common Title Words</h2>
+        <div id="d3-track-length-chart"></div>
+        <p class="viz-desc">The bar chart explores the relationship between track length and song popularity. We grouped song lengths into five buckets, including <2 minutes, 2-3 minutes, 3-4 minutes, 4-5 minutes, and 5+ minutes. Each bucket has an average popularity score equal to the mean of all the song scores in its respective grouping. From the visualization, we examine some key insights. First, songs in the 3-4 minute and 4-5 minute ranges have the highest average popularity, both hovering around 55. Second, songs under 2 minutes perform worse in terms of notability. Lastly, songs in the 2-3 minute and 5+ minute ranges show slightly lower scores than the top two buckets. All these insights suggest there is a clear, optimal range for track lengths that directly lead to higher average popularity scores. The top-performing groups demonstrate that a medium track length is both long enough to develop song structure while simultaneously short enough to keep listeners engaged. This takeaway aligns with the current music consumption industry. Songs that dominate usually fall within a medium duration to balance both track replayability and depth.</p>
+      </div>
+      
     </main>
   </div>
+
+  <script src="https://d3js.org/d3.v7.min.js"></script>
+  <script src="Track_Length_Success.js"></script>
 </body>
 </html>
