@@ -7,18 +7,18 @@ spotify.then(function(data) {
         d.average_popularity = +d.average_popularity;
     });
 
-    const width = 700, height = 450;
-    const margin = {top: 40, bottom: 55, left: 80, right: 40};
+    const width = 920, height = 620;
+    const margin = {top: 60, bottom: 80, left: 100, right: 40};
 
     const svg = d3.select("#d3-track-length-chart")
         .append("svg")
         .attr("width", width)
         .attr("height", height)
-        .style("background", "#f5f0ff");
+        .style("background", "#ffffff");
 
     svg.append("text")
         .attr("x", width / 2)
-        .attr("y", 20)
+        .attr("y", 30)
         .attr("text-anchor", "middle")
         .style("font-size", "18px")
         .style("font-weight", "bold")
@@ -106,7 +106,7 @@ spotify.then(function(data) {
 
     svg.append("text")
         .attr("x", width / 2)
-        .attr("y", height - 10)
+        .attr("y", height - 20)
         .style("text-anchor", "middle")
         .style("fill", "#111")
         .text("Track Length Group");
@@ -114,7 +114,7 @@ spotify.then(function(data) {
     svg.append("text")
         .attr("transform", "rotate(-90)")
         .attr("x", 0 - (height / 2))
-        .attr("y", 30)
+        .attr("y", 40)
         .style("text-anchor", "middle")
         .style("fill", "#111")
         .text("Average Popularity Score");
