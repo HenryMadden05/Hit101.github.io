@@ -175,8 +175,9 @@ body {
 
 .viz-card iframe {
   display: block;
-  width: 100%;
-  max-width: 1000px;
+  width: 900px;
+  max-width: 100%;
+  margin: 0 auto;
   border: none;
   border-radius: 6px;
   background: #ffffff;
