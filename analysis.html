@@ -45,7 +45,8 @@
       <div class="viz-card">
         <h2>Track Popularity vs. Release Date</h2>
         <p class="viz-desc">This scatter plot reveals a clear recency bias in Spotify's popularity scoring system — tracks released after 2010 dominate the upper popularity range, while older songs from the 1950s through the 1990s cluster at lower scores despite being culturally significant. The density of points increases sharply after 2015, reflecting both the explosion of streaming-era releases and Spotify's algorithm favoring recent listening activity in its scoring. Album tracks (blue) make up the vast majority of the dataset, while singles (orange) become increasingly prominent in recent years, consistent with the industry's broader shift toward single-driven release strategies. Artists with larger follower counts (encoded by bubble size) tend to appear at higher popularity scores, suggesting that audience size and track popularity are correlated.</p>
-        <p class="viz-desc">To see how the data changes based on artist following toggle the button below. </p>
+        <h2>     </h2>
+        <p class="viz-desc">Interactive Instructions: To see how the data changes based on artist following toggle the button below. </p>
         <h2>     </h2>
         <iframe src="bubble_chart.html" title="Bubble Chart: Track Popularity vs Release Date" style="height: 580px; border: none; background: white;"></iframe>
       </div>
@@ -53,7 +54,8 @@
       <div class="viz-card">
         <h2>Popularity Distribution by Year</h2>
         <p class="viz-desc">The box plot shows that the distribution of track popularity has remained remarkably stable across release years from 2000 to 2025, with median scores consistently hovering around 55–60 and interquartile ranges spanning roughly 40–75 each year. This consistency suggests that no single era dramatically outperforms others in average popularity — the platform appears to maintain a relatively uniform scoring distribution over time. However, the lower whiskers extending toward 0 in every year indicate that each cohort contains a long tail of low-performing tracks, while the upper whiskers reaching into the high 80s and 90s reflect a small number of breakout hits in every year. The 2025 box notably shows a wider spread, likely because the year is still early and only its biggest tracks have accumulated significant play counts so far.</p>
-        <p class="viz-desc">To see how the data changes based on a certain start year toggle the slider below.</p>
+        <h2>     </h2>
+        <p class="viz-desc">Interactive Instructions: To see how the data changes based on a certain start year toggle the slider below.</p>
         <h2>     </h2>
         <iframe src="boxplot.html" title="Box Plot: Popularity Distribution by Year" style="height: 570px; border: none; background: white;"></iframe>
       </div>
@@ -67,7 +69,8 @@
       <div class="viz-card">
         <h2>Explicit vs. Clean Tracks by Genre and Time</h2>
         <p class="viz-desc">From a holistic view, it is evident the number of songs released to the general public has dramatically increased since 2009, when global streaming and the internet accessibility dramatically saw an uptick. In addition, the data illustrates that over the last several decades songs of explicit nature have accounted for a larger proportion of songs. However, constricting the data by stringent popularity thresholds demonstrates explicit proportions do not increase but stay relatively consistent. This reveals that explicit songs themselves, even within certain genres such as pop and hip-hop, do not substantially increase a song's ability to be highly rated (popular). In other words, it suggests that artists do not need to feel compelled to take into account the explicitly of their song and can write in the manner that best expresses their message.</p>
-        <p class="viz-desc">Click the dropdown menu to see how explicit nature change by genre over time. Slide the popularity threhold to see how songs above certain rankings demonstrate the split between clean and explicit. </p>
+        <h2>     </h2>
+        <p class="viz-desc">Interactive Instructions: Click the dropdown menu to see how explicit nature change by genre over time. Slide the popularity threhold to see how songs above certain rankings demonstrate the split between clean and explicit. </p>
         <h2> </h2>
         <iframe src="Explicit vs. Clean Tracks by Genre and Time.html" title="Explicit vs. Clean Tracks by Genre and Time" style="height: 550px; border: none; background: white;"></iframe>
       </div>
@@ -75,7 +78,8 @@
       <div class="viz-card">
         <h2>Average Track Popularity by Common Title Words</h2>
         <p class="viz-desc">The below scatter plot depicts the ten most commonly used words in song titles across our dataset. These 10 words are plotted by their counts of appearances across different songs, with each point representing their aggregate average track popularity. There is one clear outlier in the data: the word love. Love appears in 305 different song titles, while the other nine words span the 50 to 100 range. When examining the majority of data points, it becomes evident that there isn’t a strong correlation between the frequency of common words in song titles and their average popularity. This suggests that when artists create new songs, they shouldn’t necessarily include title words commonly used in other songs. Ultimately, this visualization shows that word frequency isn’t a strong predictor of song performance. The plot effectively uses a minimal number of scatter plot points to convey a clear takeaway. This is crucial because a viewer isn’t hit with a plot filled with thousands of data points.</p>
-        <p class="viz-desc"> Hover over each plotted data point to learn the specific word, how many times it appears in the dataset's song titles, and its average popularity score. </p>
+        <h2>     </h2>
+        <p class="viz-desc"> Interactive Instructions: Hover over each plotted data point to learn the specific word, how many times it appears in the dataset's song titles, and its average popularity score. </p>
         <h2> </h2>
         <iframe src="title_words_popularity.html" title="Dot Plot: Common Title Words and Song Popularity" style="height: 520px; border: none; background: white;"></iframe>
       </div>
@@ -83,7 +87,8 @@
       <div class="viz-card">
         <h2>How Track Length Impacts Song Popularity</h2>
         <p class="viz-desc">The bar chart explores the relationship between track length and song popularity. We grouped song lengths into five buckets, including <2 minutes, 2-3 minutes, 3-4 minutes, 4-5 minutes, and 5+ minutes. Each bucket has an average popularity score equal to the mean of all the song scores in its respective grouping. From the visualization, we examine some key insights. First, songs in the 3-4 minute and 4-5 minute ranges have the highest average popularity, both hovering around 55. Second, songs under 2 minutes perform worse in terms of notability. Lastly, songs in the 2-3 minute and 5+ minute ranges show slightly lower scores than the top two buckets. All these insights suggest there is a clear, optimal range for track lengths that directly lead to higher average popularity scores. The top-performing groups demonstrate that a medium track length is both long enough to develop song structure while simultaneously short enough to keep listeners engaged. This takeaway aligns with the current music consumption industry. Songs that dominate usually fall within a medium duration to balance both track replayability and depth.</p>
-        <p class="viz-desc"> Hover over each bar to view the exact number of tracks and the average popularity score for the respective track length group.</p>
+        <h2>     </h2>
+        <p class="viz-desc"> Interactive Instructions: Hover over each bar to view the exact number of tracks and the average popularity score for the respective track length group.</p>
         <h2> </h2>
         <div id="d3-track-length-chart"></div>
       </div>
