@@ -34,10 +34,6 @@ spotify.then(function(data) {
         .domain([0, d3.max(data, d => d.average_popularity)])
         .range([height - margin.bottom, margin.top]);
 
-    const color = d3.scaleOrdinal()
-        .domain(data.map(d => d.duration_bin))
-        .range(["#e0ccff", "#d6b8ff", "#b266ff", "#8a33cc", "#5a0099"]);
-
     const xAxis = svg.append("g")
         .attr("transform", `translate(0,${height - margin.bottom})`)
         .call(d3.axisBottom(x));
@@ -81,7 +77,7 @@ spotify.then(function(data) {
         .attr("y", d => y(d.average_popularity))
         .attr("width", x.bandwidth())
         .attr("height", d => height - margin.bottom - y(d.average_popularity))
-        .attr("fill", d => color(d.duration_bin))
+        .attr("fill", "#8e3ccf")
 
         .on("mouseover", function(event, d) {
             tooltip
